@@ -16,7 +16,10 @@ class ScoreCard extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(flex: 1, child: Chart()),
+              Expanded(flex: 1, child: Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: Chart(),
+              )),
               Expanded(
                 flex: 3,
                 child: Padding(
