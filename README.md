@@ -2,34 +2,8 @@
       <img src="https://user-images.githubusercontent.com/59374587/115237065-7e835c80-a0f2-11eb-8922-d2a14bac363b.png" width="70" alt="Logo dev.quiz_"/>
 </p>
 
-<h1 align="center">DevQuiz</h1>
+<h1 align="center">Flutter Dev</h1>
 
-- ✅ Liftoff 💪
-- 🔄 Maaximum Speed 🏃‍♂️
-- 🔄 In Orbit 👨‍🚀 
-- 🔄 Landing 🔥
-- 🔄 Surface Exploration ⚡
-- 🔄 Accelerating your Career 🚀
-
----
-
-<h2 align="center">Topics 📋</h2>
-
-   <p>
-   
-   - [About 📖](#about-)
-   - [Preview 📱](#preview-)
-   - [Layout 🎨](#layout-)
-   - [Functionalities 🛠️](#functionalities-%EF%B8%8F)
-   - [Challenges and Learnings along the way 🤯](#challenges-and-learnings-along-the-way-)
-   - [Notion Files 📋](#notion-files-)
-   - [How to Use 🤔](#how-to-use-)
-   - [How to Contribute 💪](#how-to-contribute-)
-   - [License 📝](#license-)
-
-   </p>
-
----
 
 <h2 align="center">About 📖</h2>
    
@@ -57,41 +31,6 @@
    </p>
 
 ---   
-
-<h2 align="center">Functionalities 🛠️</h2>
-
-   <p>
-   
-- 
-    -  ,
-    -  ,
-    -  ,
-    -  .
-
-- 
-
-- 
-  
-   </p>
-
----
-
-<h2 align="center">Challenges and Learnings along the way 🤯</h2>
-
-   <p>
-    <br> 
-    <a href=""></a><br>
-    <br>
-    <br>
-   </p>
-
----
-
-<h2 align="center">Notion Files 📋</h2>
-
-- [Flutter Trail](https://www.notion.so/Trilha-Flutter-a306b8d8751b4f76a7a1fc8f29db6d65) 🚀
-
----
 
 <h2 align="center">How to Use 🤔</h2>
 
