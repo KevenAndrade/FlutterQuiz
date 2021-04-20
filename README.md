@@ -129,13 +129,13 @@
    ```
 
 
-   >This project was developed with ❤️ by **[@KevenAndrade](https://www.linkedin.com/in/KevenAndrade/)**, with the instructor **[@GabulDev](https://www.linkedin.com/in/gabuldev/)**, in #NextLevelWeek05 from **[Rocketseat](https://rocketseat.com.br/)**.<br>
+   >This project was developed with ❤️ by **[@KevenAndrade](https://www.linkedin.com/in/keven7andrade/)**, with the instructor **[@GabulDev](https://www.linkedin.com/in/gabuldev/)**, in #NextLevelWeek05 from **[Rocketseat](https://rocketseat.com.br/)**.<br>
    If it helped you, give ⭐, contribute, it will help me too 😉
 
 ---
 
    <div align="center">
 
-   [![Linkedin Badge](https://img.shields.io/badge/-Felipe%20Sales-292929?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/KevenAndrade/)](https://www.linkedin.com/in/KevenAndrade/)
+   [![Linkedin Badge](https://img.shields.io/badge/-Keven%20Andrade-292929?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/keven7andrade/)](https://www.linkedin.com/in/keven7andrade/)
 
    </div>
