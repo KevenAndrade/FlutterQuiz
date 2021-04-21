@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterquiz/core/app_colors.dart';
 import 'package:flutterquiz/core/app_images.dart';
 import 'package:flutterquiz/core/app_text_styles.dart';
+import 'package:flutterquiz/shared/progress.dart';
 
 class Quizcart extends StatelessWidget {
   Quizcart({Key? key}) : super(key: key);
@@ -25,11 +26,7 @@ class Quizcart extends StatelessWidget {
             Expanded( flex:1, child: Text("4/10", style: AppTextStyles.body11)),
             Expanded(
               flex: 2,
-              child: LinearProgressIndicator(
-              value: 0.4,
-              backgroundColor: AppColors.chartSecondary,
-              valueColor:
-                  AlwaysStoppedAnimation<Color>(AppColors.chartPrimary)),
+              child:  Progress(value:0.4),
             )
           ])
         ],
