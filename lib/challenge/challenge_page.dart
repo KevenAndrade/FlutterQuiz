@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterquiz/challenge/widgets/awnser.dart';
+import 'package:flutterquiz/challenge/widgets/question.dart';
 import 'package:flutterquiz/challenge/widgets/question_indicator.dart';
 
 class ChalengePage extends StatefulWidget {
@@ -13,7 +15,13 @@ class _ChalengePageState extends State<ChalengePage> {
       appBar: PreferredSize(
           preferredSize:Size.fromHeight(60),
           child: SafeArea(top:true, child: QuestionIndicator()),
-        )
+        ),
+      body: Column(
+        children: [
+          Question(question:"Pa kz k ta sirve flutter?"),
+         
+        ],
+      )
     );
   }
 }
