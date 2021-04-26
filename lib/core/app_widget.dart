@@ -8,7 +8,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter Quiz",
-      home: ChalengePage(),
+      home: Home(),
     );
   }
 }

@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutterquiz/core/app_gradients.dart';
 import 'package:flutterquiz/core/app_text_styles.dart';
 import 'package:flutterquiz/home/widgets/score_card.dart';
+import 'package:flutterquiz/models/user_modal.dart';
 
 class AppBarCustom extends PreferredSize {
-  AppBarCustom()
+  final UserModal user;
+
+  AppBarCustom({required this.user})
       : super(
           preferredSize: Size.fromHeight(250),
           child: Container(
@@ -24,7 +27,7 @@ class AppBarCustom extends PreferredSize {
                               style: AppTextStyles.title,
                               children: [
                                 TextSpan(
-                                    text: "Xibinho",
+                                    text: user.name,
                                     style: AppTextStyles.titleBold)
                               ])),
                           Container(
@@ -33,8 +36,7 @@ class AppBarCustom extends PreferredSize {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   image: DecorationImage(
-                                      image: NetworkImage(
-                                          "https://avatars.githubusercontent.com/u/65917547?v=4"))))
+                                      image: NetworkImage(user.photoUrl))))
                         ]),
                   ),
                   Align(alignment: Alignment(0.0, 1.0), child: ScoreCard())
