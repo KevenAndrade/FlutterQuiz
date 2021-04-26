@@ -9,13 +9,12 @@ class Question extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal:20, vertical: 40),
-      child: Column(
-        children: [
-          Text(question, style: AppTextStyles.heading),
-          SizedBox(height:24),
-        ],
-      )
-    );
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+        child: Column(
+          children: [
+            Text(question, style: AppTextStyles.heading),
+            SizedBox(height: 24),
+          ],
+        ));
   }
 }
