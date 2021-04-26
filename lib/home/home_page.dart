@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterquiz/home/home_controller.dart';
 import 'package:flutterquiz/home/widgets/appbar.dart';
 import 'package:flutterquiz/home/widgets/level_button.dart';
 import 'package:flutterquiz/home/widgets/quizcard.dart';
@@ -11,6 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final controller = HomeController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
