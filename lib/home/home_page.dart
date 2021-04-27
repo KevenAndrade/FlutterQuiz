@@ -5,7 +5,7 @@ import 'package:flutterquiz/home/home_state.dart';
 import 'package:flutterquiz/home/widgets/appbar.dart';
 import 'package:flutterquiz/home/widgets/level_button.dart';
 import 'package:flutterquiz/home/widgets/quizcard.dart';
-import 'package:flutterquiz/models/user_modal.dart';
+//import 'package:flutterquiz/models/user_modal.dart';
 
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);

@@ -22,7 +22,7 @@ class QuestionModal {
     return QuestionModal(
       title: map['title'],
       awnsers: List<AwnserModel>.from(
-          map['awnsers'].map((x) => AwnserModel.fromMap(x))),
+          map['awnsers']?.map((x) => AwnserModel.fromMap(x))),
     );
   }
 

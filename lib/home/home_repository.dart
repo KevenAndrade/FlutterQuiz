@@ -16,7 +16,6 @@ class HomeRepository {
     final response = await rootBundle.loadString("assets/database/quizes.json");
     final list = jsonDecode(response) as List;
     final quizzes = list.map((e) => QuizModal.fromMap(e)).toList();
-    print(quizzes[0].title);
     return quizzes;
   }
 }

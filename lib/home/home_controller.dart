@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterquiz/core/app_images.dart';
+//import 'package:flutterquiz/core/app_images.dart';
 import 'package:flutterquiz/home/home_repository.dart';
 import 'package:flutterquiz/home/home_state.dart';
-import 'package:flutterquiz/models/awnser_modal.dart';
-import 'package:flutterquiz/models/question_modal.dart';
+//import 'package:flutterquiz/models/awnser_modal.dart';
+//import 'package:flutterquiz/models/question_modal.dart';
 import 'package:flutterquiz/models/quiz_modal.dart';
 import 'package:flutterquiz/models/user_modal.dart';
 
