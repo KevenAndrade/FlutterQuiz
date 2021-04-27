@@ -1,3 +1,4 @@
+import 'package:flutterquiz/challenge/challenge_page.dart';
 import 'package:flutterquiz/home/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +7,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Flutter Quiz",
-      home: Home(),
-    );
+      home: ChalengePage(),
+    );//Home()
   }
 }
