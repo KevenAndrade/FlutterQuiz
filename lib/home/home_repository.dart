@@ -6,16 +6,17 @@ import 'package:flutterquiz/models/user_modal.dart';
 
 class HomeRepository {
   Future<UserModal> getUser() async {
-    final response = await rootBundle.loadString("databese/user.json");
+    final response = await rootBundle.loadString("assets/database/user.json");
     final user = UserModal.fromJson(response);
+    //print(user.photoUrl);
     return user;
   }
 
   Future<List<QuizModal>> getQuizzes() async {
-    final response = await rootBundle.loadString("/databese/quizes.json");
+    final response = await rootBundle.loadString("assets/database/quizes.json");
     final list = jsonDecode(response) as List;
     final quizzes = list.map((e) => QuizModal.fromMap(e)).toList();
+    print(quizzes[0].title);
     return quizzes;
   }
-  
 }

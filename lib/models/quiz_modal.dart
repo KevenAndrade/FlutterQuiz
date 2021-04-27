@@ -2,23 +2,23 @@ import 'dart:convert';
 
 import 'package:flutterquiz/models/question_modal.dart';
 
-enum Level { facil, medio, dificil, perito }
+enum Level { easy, medium, hard, expert }
 
 extension LevelStringExt on String {
-  Level get levelparce => {
-        "facil": Level.facil,
-        "medio": Level.medio,
-        "dificil": Level.dificil,
-        "perito": Level.perito
+  Level get parce => {
+         "Fácil": Level.easy,
+        "Medio": Level.medium,
+        "Dicfícil": Level.hard,
+        "Perito": Level.expert
       }[this]!;
 }
 
-extension levelExt on Level {
+extension LevelExt on Level {
   String get parce => {
-        Level.facil: "facil",
-        Level.medio: "medio",
-        Level.dificil: "dificil",
-        Level.perito: "perito"
+        Level.easy: "Fácil",
+        Level.medium: "Medio",
+        Level.hard: "Dicfícil",
+        Level.expert: "Perito"
       }[this]!;
 }
 
@@ -54,7 +54,7 @@ class QuizModal {
           map['question']?.map((x) => QuestionModal.fromMap(x))),
       questionsAwnsered: map['questionsAwnsered'],
       image: map['image'],
-      level: map['level'].toString().levelparce,
+      level: map['level'].toString().parce,
     );
   }
 

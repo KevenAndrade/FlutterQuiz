@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutterquiz/challenge/widgets/awnser.dart';
-import 'package:flutterquiz/core/app_colors.dart';
 import 'package:flutterquiz/core/app_text_styles.dart';
 import 'package:flutterquiz/shared/progress.dart';
 
