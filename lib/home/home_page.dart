@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterquiz/challenge/challenge_page.dart';
 import 'package:flutterquiz/core/app_colors.dart';
 import 'package:flutterquiz/home/home_controller.dart';
 import 'package:flutterquiz/home/home_state.dart';
@@ -53,10 +54,20 @@ class _HomeState extends State<Home> {
                         mainAxisSpacing: 16,
                         crossAxisCount: 2,
                         children: controller.quizes!
-                            .map((e) => Quizcart(
-                                quiz: e,
-                                percentagen:
-                                    e.questionsAwnsered / e.question.length))
+                            .map(
+                              (e) => Quizcart(
+                                  quiz: e,
+                                  percentagen:
+                                      e.questionsAwnsered / e.question.length,
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => ChalengePage(
+                                                  question: e.question,
+                                                )));
+                                  }),
+                            )
                             .toList()))
               ],
             ),
