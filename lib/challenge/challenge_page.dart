@@ -20,8 +20,8 @@ class _ChalengePageState extends State<ChalengePage> {
 
   @override
   void initState() {
-    controller.currentPageNotifier.addListener(() {
-      setState(() {});
+    pageController.addListener(() {
+      controller.currentpage = pageController.page!.toInt() + 1;
     });
     super.initState();
   }
@@ -37,21 +37,31 @@ class _ChalengePageState extends State<ChalengePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 BackButton(),
-                QuestionIndicator(
-                  currentpage: controller.currentpage,
-                  length: widget.question.length,
-                ),
+                ValueListenableBuilder<int>(
+                  valueListenable: controller.currentPageNotifier,
+                  builder: (context, value, _) => QuestionIndicator(
+                    currentpage: value,
+                    length: widget.question.length,
+                  ),
+                )
               ],
             )),
       ),
       body: PageView(
+        physics: NeverScrollableScrollPhysics(),
+        controller: pageController,
         children: widget.question.map((e) => Question(question: e)).toList(),
       ),
       bottomNavigationBar: SafeArea(
         child:
-            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          Expanded(child: NextButton.white(label: "Pular", onTap: () {})),
-          Expanded(child: NextButton.green(label: "Confirmar", onTap: () {}))
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            Expanded(child: NextButton.white(label: "Pular", onTap: () {
+              pageController.nextPage(
+                duration: Duration(milliseconds: 10),
+                curve: Curves.linear
+              );
+            })),
+            Expanded(child: NextButton.green(label: "Confirmar", onTap: () {}))
         ]),
       ),
     );

@@ -18,14 +18,14 @@ class NextButton extends StatelessWidget {
       required this.onTap})
       : super(key: key);
 
-  NextButton.green({required label, required VoidCallback onTap})
+  NextButton.green({required String label, required VoidCallback onTap})
       : this.backgroundColor = AppColors.darkGreen,
         this.fontColor = AppColors.white,
         this.borderColor = AppColors.darkGreen,
         this.onTap = onTap,
         this.label = label;
 
-  NextButton.white({required label, required VoidCallback onTap})
+  NextButton.white({required String label, required VoidCallback onTap})
       : this.backgroundColor = AppColors.white,
         this.fontColor = AppColors.grey,
         this.borderColor = AppColors.border,
@@ -43,11 +43,14 @@ class NextButton extends StatelessWidget {
               backgroundColor: MaterialStateProperty.all(backgroundColor),
               shape: MaterialStateProperty.all(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10))),
-              side: MaterialStateProperty.all(BorderSide(color: borderColor))),
-          onPressed: () {},
+              side:
+                  MaterialStateProperty.all(BorderSide(color: borderColor))),
+          onPressed: onTap,
           child: Text(label,
               style: GoogleFonts.notoSans(
-                  fontWeight: FontWeight.w600, fontSize: 15, color: fontColor)),
+                  fontWeight: FontWeight.w600,
+                  fontSize: 15,
+                  color: fontColor)),
         ),
       ),
     );
