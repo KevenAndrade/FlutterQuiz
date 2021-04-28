@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterquiz/challenge/challenge_controller.dart';
 import 'package:flutterquiz/challenge/widgets/awnser.dart';
 import 'package:flutterquiz/challenge/widgets/next_Button.dart';
 import 'package:flutterquiz/challenge/widgets/question.dart';
@@ -14,6 +15,16 @@ class ChalengePage extends StatefulWidget {
 }
 
 class _ChalengePageState extends State<ChalengePage> {
+  final controller = ChalengeController();
+  final pageController = PageController();
+
+  @override
+  void initState() {
+    controller.currentPageNotifier.addListener(() {
+      setState(() {});
+    });
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +37,15 @@ class _ChalengePageState extends State<ChalengePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 BackButton(),
-                QuestionIndicator(),
+                QuestionIndicator(
+                  currentpage: controller.currentpage,
+                  length: widget.question.length,
+                ),
               ],
             )),
       ),
-      body: Column(
-        children: [
-          Question(question: widget.question[0]),
-        ],
+      body: PageView(
+        children: widget.question.map((e) => Question(question: e)).toList(),
       ),
       bottomNavigationBar: SafeArea(
         child:
