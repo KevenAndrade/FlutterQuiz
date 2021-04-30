@@ -1,0 +1,3 @@
+class QuizCcontroller {
+  var indexSelected;
+}
