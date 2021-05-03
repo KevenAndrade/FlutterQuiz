@@ -5,6 +5,7 @@ import 'package:flutterquiz/challenge/widgets/next_Button.dart';
 import 'package:flutterquiz/challenge/widgets/question.dart';
 import 'package:flutterquiz/challenge/widgets/question_indicator.dart';
 import 'package:flutterquiz/models/question_modal.dart';
+import 'package:flutterquiz/result/result_page.dart';
 
 class ChalengePage extends StatefulWidget {
   final List<QuestionModal> question;
@@ -27,9 +28,9 @@ class _ChalengePageState extends State<ChalengePage> {
   }
 
   void Nextpage() {
-    if(controller.currentpage < widget.question.length)
-    pageController.nextPage(
-        duration: Duration(milliseconds: 10), curve: Curves.linear);
+    if (controller.currentpage < widget.question.length)
+      pageController.nextPage(
+          duration: Duration(milliseconds: 10), curve: Curves.linear);
   }
 
   @override
@@ -72,17 +73,20 @@ class _ChalengePageState extends State<ChalengePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         if (value < widget.question.length)
-                        Expanded(
-                            child: NextButton.white(
-                          label: "Pular",
-                          onTap: Nextpage,
-                        )),
+                          Expanded(
+                              child: NextButton.white(
+                            label: "Pular",
+                            onTap: Nextpage,
+                          )),
                         if (value == widget.question.length)
                           Expanded(
                               child: NextButton.green(
                                   label: "Confirmar",
                                   onTap: () {
-                                    Navigator.pop(context);
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => Result()));
                                   }))
                       ]))),
     );
