@@ -26,6 +26,12 @@ class _ChalengePageState extends State<ChalengePage> {
     super.initState();
   }
 
+  void Nextpage() {
+    if(controller.currentpage < widget.question.length)
+    pageController.nextPage(
+        duration: Duration(milliseconds: 10), curve: Curves.linear);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,20 +56,35 @@ class _ChalengePageState extends State<ChalengePage> {
       body: PageView(
         physics: NeverScrollableScrollPhysics(),
         controller: pageController,
-        children: widget.question.map((e) => Question(question: e)).toList(),
+        children: widget.question
+            .map((e) => Question(
+                  question: e,
+                  onChange: () {
+                    Nextpage();
+                  },
+                ))
+            .toList(),
       ),
       bottomNavigationBar: SafeArea(
-        child:
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Expanded(child: NextButton.white(label: "Pular", onTap: () {
-              pageController.nextPage(
-                duration: Duration(milliseconds: 10),
-                curve: Curves.linear
-              );
-            })),
-            Expanded(child: NextButton.green(label: "Confirmar", onTap: () {}))
-        ]),
-      ),
+          child: ValueListenableBuilder<int>(
+              valueListenable: controller.currentPageNotifier,
+              builder: (context, value, _) => Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        if (value < widget.question.length)
+                        Expanded(
+                            child: NextButton.white(
+                          label: "Pular",
+                          onTap: Nextpage,
+                        )),
+                        if (value == widget.question.length)
+                          Expanded(
+                              child: NextButton.green(
+                                  label: "Confirmar",
+                                  onTap: () {
+                                    Navigator.pop(context);
+                                  }))
+                      ]))),
     );
   }
 }
