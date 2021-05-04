@@ -34,6 +34,13 @@ class _ChalengePageState extends State<ChalengePage> {
           duration: Duration(milliseconds: 10), curve: Curves.linear);
   }
 
+  void onSelected(bool value) {
+    if (value) {
+      controller.rightAnswer++;
+    }
+    Nextpage();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,9 +68,7 @@ class _ChalengePageState extends State<ChalengePage> {
         children: widget.question
             .map((e) => Question(
                   question: e,
-                  onChange: () {
-                    Nextpage();
-                  },
+                  onSelected: onSelected,
                 ))
             .toList(),
       ),
@@ -84,11 +89,15 @@ class _ChalengePageState extends State<ChalengePage> {
                               child: NextButton.green(
                                   label: "Confirmar",
                                   onTap: () {
-                                    Navigator.push(
+                                    Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) => Result(
                                                   title: widget.title,
+                                                  length:
+                                                      widget.question.length,
+                                                  rightAnswer:
+                                                      controller.rightAnswer,
                                                 )));
                                   }))
                       ]))),

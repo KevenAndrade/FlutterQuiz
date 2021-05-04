@@ -5,8 +5,9 @@ import 'package:flutterquiz/models/question_modal.dart';
 
 class Question extends StatefulWidget {
   final QuestionModal question;
-  final VoidCallback onChange;
-  const Question({Key? key, required this.question, required this.onChange})
+  final ValueChanged<bool> onSelected;
+
+  const Question({Key? key, required this.question, required this.onSelected})
       : super(key: key);
 
   @override
@@ -29,11 +30,11 @@ class _QuestionState extends State<Question> {
                   awnser: widget.question.awnsers[i],
                   isSelected: indexSelected == i,
                   disabled: indexSelected != -1,
-                  onTap: () {
+                  onTap: (value) {
                     indexSelected = i;
                     setState(() {});
                     Future.delayed(Duration(seconds: 1))
-                        .then((value) => widget.onChange());
+                        .then((_) => widget.onSelected(value));
                   }),
           ],
         ));
