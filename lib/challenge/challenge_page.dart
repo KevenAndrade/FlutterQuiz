@@ -9,7 +9,8 @@ import 'package:flutterquiz/result/result_page.dart';
 
 class ChalengePage extends StatefulWidget {
   final List<QuestionModal> question;
-  ChalengePage({Key? key, required this.question});
+  final String title;
+  ChalengePage({Key? key, required this.question, required this.title});
 
   @override
   _ChalengePageState createState() => _ChalengePageState();
@@ -86,7 +87,9 @@ class _ChalengePageState extends State<ChalengePage> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => Result()));
+                                            builder: (context) => Result(
+                                                  title: widget.title,
+                                                )));
                                   }))
                       ]))),
     );
