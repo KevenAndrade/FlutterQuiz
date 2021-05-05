@@ -3,7 +3,8 @@ import 'package:flutterquiz/core/app_text_styles.dart';
 import 'package:flutterquiz/home/widgets/chart.dart';
 
 class ScoreCard extends StatelessWidget {
-  const ScoreCard({Key? key}) : super(key: key);
+  final double porcentagen;
+  const ScoreCard({Key? key, required this.porcentagen}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,11 @@ class ScoreCard extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Expanded(flex: 1, child: Chart()),
+                Expanded(
+                    flex: 1,
+                    child: Chart(
+                      porcentagen: porcentagen,
+                    )),
                 Expanded(
                   flex: 3,
                   child: Padding(

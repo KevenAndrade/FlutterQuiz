@@ -39,7 +39,7 @@ class AppBarCustom extends PreferredSize {
                                       image: NetworkImage(user.photoUrl))))
                         ]),
                   ),
-                  Align(alignment: Alignment(0.0, 1.0), child: ScoreCard())
+                  Align(alignment: Alignment(0.0, 1.0), child: ScoreCard(porcentagen: user.score/100,))
                 ],
               )),
         );
