@@ -37,9 +37,9 @@ class Result extends StatelessWidget {
                     style: AppTextStyles.body,
                     children: [
                       TextSpan(
-                          text: "\n ${title}", style: AppTextStyles.bodyBold),
+                          text: "\n $title", style: AppTextStyles.bodyBold),
                       TextSpan(
-                          text: "\n com ${rightAnswer} de ${length} acertos.",
+                          text: "\n com $rightAnswer de $length acertos.",
                           style: AppTextStyles.body),
                     ]),
                 textAlign: TextAlign.center,

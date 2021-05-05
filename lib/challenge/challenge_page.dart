@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutterquiz/challenge/challenge_controller.dart';
-import 'package:flutterquiz/challenge/widgets/awnser.dart';
 import 'package:flutterquiz/challenge/widgets/next_Button.dart';
 import 'package:flutterquiz/challenge/widgets/question.dart';
 import 'package:flutterquiz/challenge/widgets/question_indicator.dart';

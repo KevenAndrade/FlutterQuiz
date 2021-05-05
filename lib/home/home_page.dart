@@ -64,7 +64,8 @@ class _HomeState extends State<Home> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) => ChalengePage(
-                                                  question: e.question, title: e.title,
+                                                  question: e.question,
+                                                  title: e.title,
                                                 )));
                                   }),
                             )
